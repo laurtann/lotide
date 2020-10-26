@@ -7,5 +7,12 @@ const assertEqual = function(actual, expected) {
 };
 
 const tail = function(array) {
-  return array.slice(1);
+  let ans = [];
+  if (array.length > 1) {
+    ans = array.slice(1);
+  } 
+  return ans;
 };
+
+const words = [];
+console.log(tail(words));
