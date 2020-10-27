@@ -14,7 +14,7 @@ const eqArrays = function(array1, array2) {
 };
 
 
-const assertEqualArrays = function(arrayA, arrayB) {
+const assertArraysEqual = function(arrayA, arrayB) {
   if (eqArrays(arrayA, arrayB)) {
     console.log(`🐵🐵🐵 Array Assertion Passed: ${arrayA} === ${arrayB}`);
   } else {
@@ -22,4 +22,4 @@ const assertEqualArrays = function(arrayA, arrayB) {
   }
 };
 
-// console.log(assertEqualArrays(["1", "2", "3"], ["1", "2", "3"]));
+console.log(assertArraysEqual(["1", "2", "3"], ["1", "2", "3"]));
