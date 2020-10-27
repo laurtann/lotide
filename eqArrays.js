@@ -21,4 +21,4 @@ const eqArrays = function(array1, array2) {
   } return equalFlag;
 };
 
-assertEqual(eqArrays([1, 2, 3], [1, 4, 3]), true); // => should PASS
+// assertEqual(eqArrays([1, 2, 3], [1, 4, 3]), true); 
