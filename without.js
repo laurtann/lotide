@@ -1,16 +1,13 @@
 const eqArrays = function(array1, array2) {
   let equalFlag;
-  if (array1.length !== array2.length) {
-    return false;
-  }
-
   for (let i = 0; i < array1.length; i++) {
     if (array1[i] === array2[i]) {
       equalFlag = true;
     } else {
       return false;
     }
-  } return equalFlag;
+  } 
+  return equalFlag;
 };
 
 const assertArraysEqual = function(arrayA, arrayB) {
@@ -22,8 +19,8 @@ const assertArraysEqual = function(arrayA, arrayB) {
 };
 
 const without = function(source, itemsToRemove) {
-  let resultArr = source.filter(function(item) {
-    return !itemsToRemove.includes(item);
+  const resultArr = source.filter(function(sourceItem) {
+    return !itemsToRemove.includes(sourceItem);
   });
   return resultArr;
 };
