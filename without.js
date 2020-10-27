@@ -28,12 +28,12 @@ const without = function(source, itemsToRemove) {
   return resultArr;
 };
 
-// Tests
-assertArraysEqual(without([1, 2, 3], [1]), [2, 3]); // => true
-assertArraysEqual(without(["1", "2", "3"], ["3"]), ["1", "2"]); // => true
-assertArraysEqual(without(["1", "2", "3"], ["2", "3"]), [1]); // => false
-assertArraysEqual(without(["a", "1", 6], ["a", 6]), ["1"]); // => true
-assertArraysEqual(without(["1", "a", 3], ["a", "3"]), ["1"]); // => false
+// // Tests
+// assertArraysEqual(without([1, 2, 3], [1]), [2, 3]); // => true
+// assertArraysEqual(without(["1", "2", "3"], ["3"]), ["1", "2"]); // => true
+// assertArraysEqual(without(["1", "2", "3"], ["2", "3"]), [1]); // => false
+// assertArraysEqual(without(["a", "1", 6], ["a", 6]), ["1"]); // => true
+// assertArraysEqual(without(["1", "a", 3], ["a", "3"]), ["1"]); // => false
 
 
 
