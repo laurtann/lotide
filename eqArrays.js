@@ -16,9 +16,9 @@ const eqArrays = function(array1, array2) {
     if (array1[i] === array2[i]) {
       equalFlag = true;
     } else {
-      equalFlag = false;
+      return false;
     }
   } return equalFlag;
 };
 
-assertEqual(eqArrays([1, 2, 3], [3, 2, 1]), true); // => should PASS
+assertEqual(eqArrays([1, 2, 3], [1, 4, 3]), true); // => should PASS
