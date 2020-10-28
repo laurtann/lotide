@@ -13,6 +13,3 @@ const tail = function(array) {
   } 
   return ans;
 };
-
-const words = [];
-console.log(tail(words));
