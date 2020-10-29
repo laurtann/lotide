@@ -7,7 +7,7 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-//count only will be given an array(allItems) and obj (itemsToCount)
+// count only will be given an array(allItems) and obj (itemsToCount)
 // will return obj with counts of everything input obj listed (if truthy!)
 
 const countOnly = function(allItems, itemsToCount) {
@@ -38,9 +38,11 @@ const firstNames = [
   "Joe"
 ];
 
-const result1 = countOnly(firstNames, { "Jason": true, "Karima": true, "Fang": true, "Agouhanna": false });
+//tests
+// const result1 = countOnly(firstNames, { "Jason": true, "Karima": true, "Fang": true, "Agouhanna": false });
 
-assertEqual(result1["Jason"], 1);
-assertEqual(result1["Karima"], undefined);
-assertEqual(result1["Fang"], 2);
-assertEqual(result1["Agouhanna"], undefined);
+// // all should pass
+// assertEqual(result1["Jason"], 1);
+// assertEqual(result1["Karima"], undefined);
+// assertEqual(result1["Fang"], 2);
+// assertEqual(result1["Agouhanna"], undefined);
