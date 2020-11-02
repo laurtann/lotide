@@ -1,14 +1,5 @@
-// assertEqual can only compare primitive value types
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`💁💁💁 Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🙅‍♀️🙅‍♀️🙅‍♀️ Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
+const assertEqual = require('./assertEqual');
 
-// count only will be given an array(allItems) and obj (itemsToCount)
-// will return obj with counts of everything input obj listed (if truthy!)
 
 const countOnly = function(allItems, itemsToCount) {
   const results = {};
@@ -24,21 +15,21 @@ const countOnly = function(allItems, itemsToCount) {
   }
   return results;
 };
+module.exports = countOnly;
 
-// Test cases
-const firstNames = [
-  "Karl",
-  "Salima",
-  "Agouhanna",
-  "Fang",
-  "Kavith",
-  "Jason",
-  "Salima",
-  "Fang",
-  "Joe"
-];
-
-//tests
+// // Test cases
+// const firstNames = [
+//   "Karl",
+//   "Salima",
+//   "Agouhanna",
+//   "Fang",
+//   "Kavith",
+//   "Jason",
+//   "Salima",
+//   "Fang",
+//   "Joe"
+// ];
+// // tests
 // const result1 = countOnly(firstNames, { "Jason": true, "Karima": true, "Fang": true, "Agouhanna": false });
 
 // // all should pass
