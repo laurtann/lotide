@@ -1,25 +1,23 @@
-const assertEqual = require('../assertEqual');
+const assert = require('chai').assert;
 const tail = require('../tail');
 
-//tests
-const words = ["That's what", "she", "said"];
-tail(words);
-assertEqual(words.length, 3); // => T (OG array not modified);
-assertEqual(words[0], "That's what"); // => T (OG array not modified);
-assertEqual(words[2], "said"); // => T (OG array not modified);
+describe("#tail", () => {
+  it("returns [] for ['Yo Yo']", () => {
+    assert.deepEqual(tail(['Yo Yo']), []);
+  });
 
-const words2 = ["Yo Yo"];
-console.log(tail(words2));
-let testWords2 = tail(words2);
-assertEqual(testWords2[0], "Yo Yo"); // => F (empty array will return undefined in assertEqual check)
+  it("returns ['she', 'said] for ['That's what', 'she', 'said']", () => {
+    assert.deepEqual(tail(["That's what", "she", "said"]), ['she', 'said']);
+  });
 
-const words3 = [];
-console.log(tail(words3)); // => returns empty array
+  it("returns [3, 4, 5] for [1, 2, 3, 4, 5]", () => {
+    assert.deepEqual(tail([1, 2, 3, 4, 5]), [2, 3, 4, 5]);
+  });
 
-const result = tail(["Hello", "Lighthouse", "Labs"]);
-assertEqual(result.length, 2); // ensure we get back two elements
-assertEqual(result[0], "Lighthouse"); // ensure first element is "Lighthouse"
-assertEqual(result[1], "Labs"); // ensure second element is "Labs"
+  it("returns [] for []", () => {
+    assert.deepEqual(tail([]), []);
+  });
+});
 
 
 
